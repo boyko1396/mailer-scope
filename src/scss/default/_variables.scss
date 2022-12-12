@@ -1,0 +1,36 @@
+// typography
+$ff-default: 'IBM Plex Sans', Arial, sans-serif;
+$ff-accent: 'Tahoma', Arial, sans-serif;
+
+// pallets
+$color-black-1: #1B1F26;
+$color-black-2: #21262E;
+$color-white-1: #fff;
+$color-gray-1: #5D6573;
+$color-gray-2: #2C323D;
+$color-accent-1: #473CC2;
+$color-accent-2: #D045AE;
+$color-green-1: #02B03D;
+$color-green-2: #2FA71F;
+$color-red-1: #BC4114;
+$color-red-2: #BD332B;
+$color-red-3: #D04141;
+$color-yellow-1: #93A452;
+
+$gradient-accent-alpha-12: linear-gradient(84deg,rgba($color-accent-1,.12) 0%,rgba($color-accent-2,.12) 100%);
+$gradient-accent-alpha-100: linear-gradient(84deg,rgba($color-accent-1,1) 0%,rgba($color-accent-2,1) 100%);
+
+$xl: 1440px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;

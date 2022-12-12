@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    include includes/sprite.pug
+
+    #root
+
+      main(role="main").main
+        .container
+          .main__inner
+            aside.main__inner-aside
+              include includes/header.pug
+            .main__inner-layout
+              section.layout
+                .layout__inner
+                  header.js-header-min-height.layout__header
+                    .pager.layout__header-pager
+                      ul.pager__list
+                        li.pager__item
+                          a(href="#").js-tabs-nav-layout.pager__link.is-active Ваше письмо почти идеально!
+                    .layout__header-account
+                      .checks-general.layout__header-account-check
+                        .checks-general__inner
+                          .checks-general__info
+                            p.checks-general__info-title Проверок: 952 / 2400
+                            .progress.progress--size-sm.progress--theme-green.checks-general__info-progress
+                              span(style="width: 80%;").progress__current
+                          .checks-general__btn
+                            button(type="button").js-btn-add.btn-add.btn-add--size-md.btn-add--theme-green
+                              svg.icon.btn-add__icon
+                                use(xlink:href="#btn-add")
+                      .account-user.account-user--color-white.account-user--size-lg.layout__header-account-user
+                        a(href="#").account-user__link
+                          svg.icon.account-user__link-icon
+                            use(xlink:href="#account-user")
+                  .layout__main
+                    .test-result
+                      header.test-result__header
+                        .title-size-1.test-result__header-rating.test-result__header-rating--theme-1 8.2 / 10
+                        .test-result__header-info
+                          .test-result__header-info-subtitle Ссылка на результат:
+                          a(href="glockapps.com/st-3-1vpf8tbxu0" target="_blank").test-result__header-info-link glockapps.com/st-3-1vpf8tbxu0
+                        .test-result__header-action
+                          button(type="button").btn.btn--theme-accent-border.btn--size-sm.test-result__header-action-btn
+                            span.btn__inner
+                              svg.icon.btn__icon.btn__icon--dir-rtl
+                                use(xlink:href="#refresh")
+                              span.btn__title Обновить результат
+                          .test-result__header-action-suptitle Получено: 2 минут назад
+                      .recommendation-list.test-result__recommendation
+                        article.recommendation-card.recommendation-card--result-true.recommendation-card--theme-gray.recommendation-card--size-md.recommendation-list__item
+                          header.js-recommendation-card-collapse.recommendation-card__header
+                            span.recommendation-card__header-icon-toggle
+                            h3.recommendation-card__header-title Кликните здесь для просмотра Вашего письма
+                            span.recommendation-card__header-result
+                              svg.recommendation-card__header-result-icon
+                                use(xlink:href="#checked-type-1")
+                          .recommendation-card__dropdown
+                            .content.recommendation-card__dropdown-text
+                              p Политика DMARC позволяет отправителю указать, что их электронные письма защищены SPF и / или DKIM, и дать инструкции, если ни один из этих методов проверки подлинности проходит. Пожалуйста, убедитесь, что у вас есть набор DKIM и SPF перед использованием DMARC.
+                              hr
+                              p Ваша запись DMARC установлен правильно, и ваше сообщение прошло испытание DMARC<br>Запись DMARC DNS найдено для домена _dmarc.gmail.com:
+                              p "v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com"
+                        article.recommendation-card.recommendation-card--result-false.recommendation-card--theme-gray.recommendation-card--size-md.recommendation-list__item
+                          header.js-recommendation-card-collapse.recommendation-card__header
+                            span.recommendation-card__header-icon-toggle
+                            h3.recommendation-card__header-title SpamAssassin считает, что Вы можете улучшить рейтинг ваших писем
+                            span.recommendation-card__header-result
+                              span.recommendation-card__header-result-text -1.8
+                          .recommendation-card__dropdown
+                            .content.recommendation-card__dropdown-text
+                              p Политика DMARC позволяет отправителю указать, что их электронные письма защищены SPF и / или DKIM, и дать инструкции, если ни один из этих методов проверки подлинности проходит. Пожалуйста, убедитесь, что у вас есть набор DKIM и SPF перед использованием DMARC.
+                              hr
+                              p Ваша запись DMARC установлен правильно, и ваше сообщение прошло испытание DMARC<br>Запись DMARC DNS найдено для домена _dmarc.gmail.com:
+                              p "v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com"
+                            .recommendation-list.recommendation-card__dropdown-list
+                              article.recommendation-card.recommendation-card--result-true.recommendation-card--theme-gray.recommendation-card--size-md.recommendation-list__item
+                                header.js-recommendation-card-collapse.recommendation-card__header
+                                  span.recommendation-card__header-icon-toggle
+                                  h3.recommendation-card__header-title Кликните здесь для просмотра Вашего письма
+                                  span.recommendation-card__header-result
+                                    svg.recommendation-card__header-result-icon
+                                      use(xlink:href="#checked-type-1")
+                                .recommendation-card__dropdown
+                                  .content.recommendation-card__dropdown-text
+                                    p Политика DMARC позволяет отправителю указать, что их электронные письма защищены SPF и / или DKIM, и дать инструкции, если ни один из этих методов проверки подлинности проходит. Пожалуйста, убедитесь, что у вас есть набор DKIM и SPF перед использованием DMARC.
+                                    hr
+                                    p Ваша запись DMARC установлен правильно, и ваше сообщение прошло испытание DMARC<br>Запись DMARC DNS найдено для домена _dmarc.gmail.com:
+                                    p "v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com"
+                              article.recommendation-card.recommendation-card--result-false.recommendation-card--theme-gray.recommendation-card--size-md.recommendation-list__item
+                                header.js-recommendation-card-collapse.recommendation-card__header
+                                  span.recommendation-card__header-icon-toggle
+                                  h3.recommendation-card__header-title Кликните здесь для просмотра Вашего письма
+                                  span.recommendation-card__header-result
+                                    span.recommendation-card__header-result-text -12.5
+                                .recommendation-card__dropdown
+                                  .content.recommendation-card__dropdown-text
+                                    p Политика DMARC позволяет отправителю указать, что их электронные письма защищены SPF и / или DKIM, и дать инструкции, если ни один из этих методов проверки подлинности проходит. Пожалуйста, убедитесь, что у вас есть набор DKIM и SPF перед использованием DMARC.
+                                    hr
+                                    p Ваша запись DMARC установлен правильно, и ваше сообщение прошло испытание DMARC<br>Запись DMARC DNS найдено для домена _dmarc.gmail.com:
+                                    p "v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com"
+                        article.recommendation-card.recommendation-card--result-true.recommendation-card--theme-gray.recommendation-card--size-md.recommendation-list__item
+                          header.js-recommendation-card-collapse.recommendation-card__header
+                            span.recommendation-card__header-icon-toggle
+                            h3.recommendation-card__header-title Кликните здесь для просмотра Вашего письма
+                            span.recommendation-card__header-result
+                              svg.recommendation-card__header-result-icon
+                                use(xlink:href="#checked-type-1")
+                          .recommendation-card__dropdown
+                            .content.recommendation-card__dropdown-text
+                              p Политика DMARC позволяет отправителю указать, что их электронные письма защищены SPF и / или DKIM, и дать инструкции, если ни один из этих методов проверки подлинности проходит. Пожалуйста, убедитесь, что у вас есть набор DKIM и SPF перед использованием DMARC.
+                              hr
+                              p Ваша запись DMARC установлен правильно, и ваше сообщение прошло испытание DMARC<br>Запись DMARC DNS найдено для домена _dmarc.gmail.com:
+                              p "v=DMARC1; p=none; sp=quarantine; rua=mailto:mailauth-reports@google.com"
+
+    include includes/foot.pug

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    include includes/sprite.pug
+
+    #root
+
+      main(role="main").main
+        .container
+          .main__inner
+            aside.main__inner-aside
+              include includes/header.pug
+            .main__inner-layout
+              section.layout
+                .layout__inner
+                  header.js-header-min-height.layout__header
+                    .pager.layout__header-pager
+                      ul.pager__list
+                        li.pager__item
+                          a(href="#").js-tabs-nav-layout.pager__link.is-active Добро пожаловать!
+                    .layout__header-account
+                      .checks-general.layout__header-account-check
+                        .checks-general__inner
+                          .checks-general__info
+                            p.checks-general__info-title Проверок: 952 / 2400
+                            .progress.progress--size-sm.progress--theme-green.checks-general__info-progress
+                              span(style="width: 80%;").progress__current
+                          .checks-general__btn
+                            button(type="button").js-btn-add.btn-add.btn-add--size-md.btn-add--theme-green
+                              svg.icon.btn-add__icon
+                                use(xlink:href="#btn-add")
+                      .account-user.account-user--color-white.account-user--size-lg.layout__header-account-user
+                        a(href="#").account-user__link
+                          svg.icon.account-user__link-icon
+                            use(xlink:href="#account-user")
+                  .layout__main
+                    section.welcome-screen
+                      .welcome-screen__inner
+                        .welcome-screen__main
+                          .welcome-screen__main-box-card-list
+                            article.box-card.box-card--theme-gray.box-card--size-md.welcome-screen__main-box-card
+                              .box-card__inner
+                                .appeal-free-checks
+                                  .appeal-free-checks__inner
+                                    picture.appeal-free-checks__picture
+                                      img(src="images/appeal-free-checks-1.png" alt="Получите бесплатные 100 проверок")
+                                    .appeal-free-checks__content
+                                      h2.title-size-5.appeal-free-checks__title Получите бесплатные 100 проверок
+                                      p.appeal-free-checks__subtitle Для получения проверок необходимо пройти верификацию
+                                      form(action="#").appeal-free-checks__form
+                                        .appeal-free-checks__form-sub.appeal-free-checks__form-sub--type-sms-send
+                                          .input-group.input-group--wrap-no
+                                            .input-group__inner
+                                              .input-group__col.input-group__col--width-auto
+                                                input(type="text" name="phone" placeholder="Номер вашего телефона").u-input.u-input--theme-white.u-input--size-sm
+                                              .input-group__col.input-group__col--width-auto
+                                                button(type="submit").btn.btn--w-100.btn--theme-accent-border.btn--size-sm
+                                                  span.btn__inner
+                                                    span.btn__title Выслать код на SMS
+                            article.box-card.box-card--theme-gray.box-card--size-md.welcome-screen__main-box-card
+                              .box-card__inner
+                                h2.title-size-5.box-card__title Получайте 10% проверок с ваших партнеров
+                                label(for="referral-link").u-label.box-card__subtitle Ваша реферальная ссылка:
+                                .input-group.input-group--wrap-no.box-card__input-group
+                                  .input-group__inner
+                                    .input-group__col.input-group__col--width-auto
+                                      input(type="text" name="email" value="9437af7fe722aca57fa86259a77770f5-f877bd732odk23jv")#referral-link.u-input.u-input--theme-white.u-input--size-sm
+                                    .input-group__col.input-group__col--width-0
+                                      button(type="button").btn-action.btn-action--theme-accent-border.btn-action--size-sm
+                                        span.btn-action__inner
+                                          svg.icon.btn-action__icon
+                                            use(xlink:href="#btn-copy")
+                            article.box-card.box-card--theme-gray.box-card--size-md.welcome-screen__main-box-card
+                              .box-card__inner
+                                h2.title-size-5.box-card__title Купить проверки (100 ₽ за 1000 проверок)
+                                button(type="button").btn.btn--theme-accent-border.btn--size-sm
+                                  span.btn__inner
+                                    span.btn__title Купить
+                        aside.welcome-screen__aside
+                          .welcome-screen__aside-appeal-card-list
+                            article.appeal-card.appeal-card--size-sm.appeal-card--theme-accent.welcome-screen__aside-appeal-card
+                              .appeal-card__inner
+                                .appeal-card__media
+                                  picture.appeal-card__picture
+                                    img(src="images/appeal-card-1.svg" alt="Протестируйте ваши письма на спам")
+                                .appeal-card__main
+                                  .appeal-card__content
+                                    h3.appeal-card__title
+                                      a(href="#").appeal-card__link Протестируйте ваши письма на спам
+                                  .appeal-card__icon-wrap
+                                    svg.icon.appeal-card__icon
+                                      use(xlink:href="#arrow-type-3")
+                            article.appeal-card.appeal-card--size-sm.appeal-card--theme-accent.welcome-screen__aside-appeal-card
+                              .appeal-card__inner
+                                .appeal-card__media
+                                  picture.appeal-card__picture
+                                    img(src="images/appeal-card-2.svg" alt="Запустите мониторинг по инбоксу")
+                                .appeal-card__main
+                                  .appeal-card__content
+                                    h3.appeal-card__title
+                                      a(href="#").appeal-card__link Запустите мониторинг по инбоксу
+                                  .appeal-card__icon-wrap
+                                    svg.icon.appeal-card__icon
+                                      use(xlink:href="#arrow-type-3")
+                            article.appeal-card.appeal-card--size-sm.appeal-card--theme-accent.welcome-screen__aside-appeal-card
+                              .appeal-card__inner
+                                .appeal-card__media
+                                  picture.appeal-card__picture
+                                    img(src="images/appeal-card-3.svg" alt="Собирайте емейлы с открытий")
+                                .appeal-card__main
+                                  .appeal-card__content
+                                    h3.appeal-card__title
+                                      a(href="#").appeal-card__link Собирайте емейлы с открытий
+                                  .appeal-card__icon-wrap
+                                    svg.icon.appeal-card__icon
+                                      use(xlink:href="#arrow-type-3")
+
+    include includes/foot.pug

@@ -1,0 +1,34 @@
+.header {
+    &__logo-wrap {
+    	margin: 0 0 80px;
+    	display: flex;
+    	align-items: center;
+    }
+    &__logo {
+    	width: 168px;
+    	height: 38px;
+    	display: block;
+    	transition: all .4s;
+    	position: relative;
+        &:hover {
+        	text-decoration: none;
+            @media (min-width: $lg-mf) {
+                opacity: .6;
+            }
+        }
+        &-img {
+        	width: 100%;
+        	height: 100%;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	object-fit: contain;
+        	object-position: left center;
+        	& + & {
+        		display: none;
+        	}
+        }
+    }
+    &__nav {
+    }
+}

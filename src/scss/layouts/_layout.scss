@@ -1,0 +1,33 @@
+.layout {
+    &__inner {
+    }
+    &__header {
+        margin: 0 0 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-pager {
+        }
+        &-account {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            &-check {
+                display: flex;
+                &:after {
+                    background: rgba($color-gray-1,.2);
+                    width: 1px;
+                    margin: 0 32px;
+                    content: '';
+                    display: block;
+                    flex: 0 0 1px;
+                }
+            }
+            &-user {
+            }
+        }
+    }
+    &__main {
+    }
+}

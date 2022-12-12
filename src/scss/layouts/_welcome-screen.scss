@@ -1,0 +1,29 @@
+.welcome-screen {
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__main {
+        margin-right: 40px;
+        flex-grow: 1;
+        &-box-card-list {
+        }
+        &-box-card {
+            & + & {
+                margin-top: 40px;
+            }
+        }
+    }
+    &__aside {
+        width: 320px;
+        margin-left: auto;
+        flex: 0 0 320px;
+        &-appeal-card-list {
+        }
+        &-appeal-card {
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+}

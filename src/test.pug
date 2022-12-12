@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    include includes/sprite.pug
+
+    #root
+
+      main(role="main").main
+        .container
+          .main__inner
+            aside.main__inner-aside
+              include includes/header.pug
+            .main__inner-layout
+              section.layout
+                .layout__inner
+                  header.js-header-min-height.layout__header
+                    .pager.layout__header-pager
+                      ul.pager__list
+                        li.pager__item
+                          a(href="#layout-tab-test-start").js-tabs-nav-layout.pager__link.is-active Запустить тест
+                        li.pager__item
+                          a(href="#layout-tab-test-history").js-tabs-nav-layout.pager__link История
+                    .layout__header-account
+                      .checks-general.layout__header-account-check
+                        .checks-general__inner
+                          .checks-general__info
+                            p.checks-general__info-title Проверок: 952 / 2400
+                            .progress.progress--size-sm.progress--theme-green.checks-general__info-progress
+                              span(style="width: 80%;").progress__current
+                          .checks-general__btn
+                            button(type="button").js-btn-add.btn-add.btn-add--size-md.btn-add--theme-green
+                              svg.icon.btn-add__icon
+                                use(xlink:href="#btn-add")
+                      .account-user.account-user--color-white.account-user--size-lg.layout__header-account-user
+                        a(href="#").account-user__link
+                          svg.icon.account-user__link-icon
+                            use(xlink:href="#account-user")
+                  .layout__main
+                    .js-tabs-content-layout
+                      #layout-tab-test-start.is-show
+                        .start-test
+                          .start-test__inner
+                            .start-test__content
+                              .start-step.start-step--is-active.start-test__step
+                                .start-step__header
+                                  .title-badge.start-step__title-wrap
+                                    h2.title-size-3.title-badge__title 1. Отправьте письмо на сгенерированную почту
+                                    span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.title-badge__badge
+                                      button(type="button").badge-info__btn ?
+                                      span.badge-info__dropdown
+                                        p.badge-info__text Для сбора информации необходимо чтобы мы могли вас идентифицировать вас.
+                                .start-step__dropdown
+                                  .email-generation.start-step__email
+                                    form(action="#").email-generation__form
+                                      .input-group.input-group--wrap-no.email-generation__input-wrap
+                                        .input-group__inner
+                                          .input-group__col.input-group__col--width-auto
+                                            input(type="text" name="email" placeholder="").u-input.u-input--theme-white.u-input--size-md
+                                          .input-group__col.input-group__col--width-0
+                                            button(type="button").btn-action.btn-action--theme-gray.btn-action--size-md
+                                              span.btn-action__inner
+                                                svg.icon.btn-action__icon
+                                                  use(xlink:href="#btn-copy")
+                                      .email-generation__footer
+                                        svg.icon.email-generation__footer-arrow
+                                          use(xlink:href="#arrow-type-1")
+                                        a(href="#").btn.btn--theme-accent-border.btn--size-lg.email-generation__footer-btn
+                                          span.btn__inner
+                                            span.btn__title После отправки письма нажмите сюда
+                              .start-step.start-test__step
+                                .start-step__header
+                                  .title-badge.start-step__title-wrap
+                                    h2.title-size-3.title-badge__title 2. Проверка
+                                    span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.title-badge__badge
+                                      button(type="button").badge-info__btn ?
+                                      span.badge-info__dropdown
+                                        p.badge-info__text 2. Проверка Проверка Проверка
+                                  .start-step__header-timer-validation-progress
+                                    | Осталось: <span>00:00:13</span>
+                                .start-step__dropdown
+                                  .validation-progress.validation-progress--size-md.validation-progress--theme-accent.start-step__validation-progress
+                                    span(style="width: 60%;").validation-progress__current
+                                      svg.icon.validation-progress__icon
+                                        use(xlink:href="#send")
+                              .start-step.start-test__step
+                                .start-step__header
+                                  .title-badge.start-step__title-wrap
+                                    h2.title-size-3.title-badge__title 3. Просмотр результата
+                                    span.badge-info.badge-info--position-top-right.badge-info--theme-gray.badge-info--size-md.title-badge__badge
+                                      button(type="button").badge-info__btn ?
+                                      span.badge-info__dropdown
+                                        p.badge-info__text 3. Просмотр результата Просмотр результата
+                                .start-step__dropdown
+                                  a(href="test-result.html").btn.btn--theme-accent-border.btn--size-md.start-step__btn-result
+                                    span.btn__inner
+                                      span.btn__title Посмотреть результат
+                            .start-test__aside
+                              aside.aside-info.aside-info--size-md.aside-info--theme-accent-light
+                                article.aside-info__inner
+                                  picture.aside-info__picture
+                                    img(src="images/aside-info-img.svg" width="130" height="120" alt="Узнайте как привлечь миллионы клиентов")
+                                  .aside-info__content
+                                    h3.title-size-4.aside-info__title Узнайте как привлечь миллионы клиентов
+                                    .content.aside-info__text
+                                      p Единственный самый полный рабочий курс добывания трафика, с помощью массового e-mail маркетинга.
+                                    a(href="#").btn.btn--theme-accent-fill.btn--size-sm.aside-info__btn
+                                      span.btn__inner
+                                        span.btn__title Получить доступ
+                      #layout-tab-test-history
+                        .table-wrap
+                          table.u-table.u-table--theme-default.u-table--type-sort.table-wrap__el
+                            thead.u-table__head
+                              tr
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text Балл
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text Эл. почта
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text Эл. почта
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text IP
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text Дата и время
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                                th
+                                  span.u-table__sort
+                                    span.u-table__sort-text Ссылка на результат
+                                    span.u-table__sort-icon-wrap
+                                      svg.icon.u-table__sort-icon
+                                        use(xlink:href="#arrow-type-2")
+                            tbody.u-table__body
+                              tr
+                                td
+                                  span.title-size-3.test-rating.test-rating--theme-green.u-table__test-rating 8.2 / 10
+                                td curtis.weaver@example.com
+                                td curtis.weaver@example.com
+                                td 174.124.71.249
+                                td 13.02.20 | 14:30
+                                td
+                                  a(href="glockapps.com/st-3-1" target="_blank") glockapps.com/st-3-1
+                              tr
+                                td
+                                  span.title-size-3.test-rating.test-rating--theme-red-light.u-table__test-rating 2.2 / 10
+                                td deanna.curtis@example.com
+                                td curtis.weaver@example.com
+                                td 152.126.190.132
+                                td 13.02.20 | 14:30
+                                td
+                                  a(href="glockapps.com/st-3-1" target="_blank") glockapps.com/st-3-1
+                              tr
+                                td
+                                  span.title-size-3.test-rating.test-rating--theme-yellow.u-table__test-rating 6.2 / 10
+                                td felicia.reid@example.com
+                                td curtis.weaver@example.com
+                                td 174.130.243.11
+                                td 13.02.20 | 14:30
+                                td
+                                  a(href="glockapps.com/st-3-1" target="_blank") glockapps.com/st-3-1
+                              tr
+                                td
+                                  span.title-size-3.test-rating.test-rating--theme-red-dark.u-table__test-rating 1.2 / 10
+                                td sara.cruz@example.com
+                                td curtis.weaver@example.com
+                                td 131.5.188.146
+                                td 13.02.20 | 14:30
+                                td
+                                  a(href="glockapps.com/st-3-1" target="_blank") glockapps.com/st-3-1
+
+    include includes/foot.pug
